@@ -1,0 +1,14 @@
+path:
+  data: /data/data
+  logs: /data/logs
+  work: /data/work
+
+bootstrap.mlockall: true
+
+discovery:
+  type: ec2
+
+discovery.ec2.groups:
+discovery.ec2.tags:
+
+cloud.node.auto_attributes: true
