@@ -25,6 +25,4 @@ WORKDIR /data
 EXPOSE 9200 
 EXPOSE 9300
 
-RUN ulimit -l unlimited
-
 ENTRYPOINT ["/opt/elasticsearch/bin/elasticsearch"]
