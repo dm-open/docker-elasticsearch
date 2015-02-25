@@ -2,17 +2,17 @@ FROM dockerfile/java:oracle-java7
 MAINTAINER Mark Smithson mark@digital-morphosis.com
 RUN apt-get update
 RUN apt-get upgrade -y
-ENV REFRESHED_AT 2014-10-21
+ENV REFRESHED_AT 2015-02-25
 
 # Install Elastic Search
-RUN wget -O /tmp/elasticsearch.tar.gz https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.3.4.tar.gz
+RUN wget -O /tmp/elasticsearch.tar.gz https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.4.tar.gz
 RUN tar -C /opt/ -xvf /tmp/elasticsearch.tar.gz
 RUN rm -f /tmp/elasticsearch.tar.gz
 
-RUN ln -s /opt/elasticsearch-1.3.4 /opt/elasticsearch
+RUN ln -s /opt/elasticsearch-1.4.4 /opt/elasticsearch
 
 # Install Plugins
-RUN /opt/elasticsearch/bin/plugin -install elasticsearch/elasticsearch-cloud-aws/2.3.0
+RUN /opt/elasticsearch/bin/plugin -install elasticsearch/elasticsearch-cloud-aws/2.4.1
 RUN /opt/elasticsearch/bin/plugin -install elasticsearch/marvel/latest
 RUN /opt/elasticsearch/bin/plugin -install karmi/elasticsearch-paramedic
 

@@ -1,7 +1,7 @@
 Docker elasticsearch
 ====================
 
-A docker container with elasticsearch 1.3.4.
+A docker container with elasticsearch 1.4.2.
 
 Plugins
 -------
