@@ -1,4 +1,4 @@
-FROM dockerfile/java:oracle-java7
+FROM java:openjdk-8-jdk
 MAINTAINER Mark Smithson mark@digital-morphosis.com
 RUN apt-get update
 RUN apt-get upgrade -y
